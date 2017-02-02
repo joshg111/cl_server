@@ -28,7 +28,7 @@ graphQLServer.use('/schema', (req, res) => {
   res.send(printSchema(schema));
 });
 
-graphQLServer.listen(GRAPHQL_PORT, () => console.log(
+graphQLServer.listen(GRAPHQL_PORT, "0.0.0.0", () => console.log(
   `GraphQL Server is now running on http://localhost:${GRAPHQL_PORT}/graphql`
 ));
 
